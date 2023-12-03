@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <input type="text" id="searchInput" placeholder="Search..." onkeydown="searchTable()">
+    <button type="button" onclick="searchTable()">Search</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox" id="selectAll" onclick="toggleSelectAll()"></th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody">
+            <!--adding table rows dynamically using JavaScript -->
+        </tbody>
+    </table>
+
+    <div class="pagination" id="pagination"> Pages
+        <!-- adding Pagination buttons dynamically using JavaScript -->
+    </div>
+
+    <button type="button" onclick="deleteSelectedRows()" class="delete-selected">Delete Selected</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
